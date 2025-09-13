@@ -4,7 +4,7 @@ on: [push]
 
 jobs:
   build:
-    uses: munichbughunter/central-devsecops-pipeline/.github/workflows/central-pipeline.yml@master
+    uses: munichbughunter/central-devsecops-pipeline/.github/workflows/central-ci.yml@master
     with:
       src: .
       pythonVersion: '3.12'
