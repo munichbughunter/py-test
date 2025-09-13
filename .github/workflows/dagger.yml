@@ -1,0 +1,16 @@
+name: dagger
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build-python:
+    name: Build Python App via Central Pipeline
+    runs-on: ubuntu-latest
+    steps:
+      - name: Call Central Dagger Function
+        uses: dagger/dagger-for-github@8.0.0
+        with:
+          version: "latest"
+          module: github.com/munichbughunter/central-devsecops-pipeline
+          args: build-python --src=. --pythonVersion=3.12
