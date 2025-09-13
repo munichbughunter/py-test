@@ -1,0 +1,10 @@
+name: Build with Central Pipeline
+
+on: [push]
+
+jobs:
+  build:
+    uses: munichbughunter/central-devsecops-pipeline/.github/workflows/central-pipeline.yml@master
+    with:
+      src: .
+      pythonVersion: '3.12'
